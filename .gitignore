@@ -11,3 +11,8 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 build/
+app
+lib/
+lib*.a
+ExampleTests
+!src/Makefile

@@ -8,18 +8,21 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-enable_testing()
+# enable_testing()
 
 add_subdirectory(googletest)
+# add_subdirectory(src)
+set(This Example)
 
 set(Headers
-    Example.hpp
+    src/Example.hpp
 )
 
 set(Sources
-    Example.cpp
+    src/Example.cpp
 )
 
 add_library(${This} STATIC ${Sources} ${Headers})
+
 
 add_subdirectory(test)
