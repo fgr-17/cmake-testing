@@ -1,9 +1,11 @@
 APP=app
 
+DEPS= example/Example.cpp
+
 .PHONY: clean
 
 all:
-	$(CXX) -o $(APP) main.cpp Example.cpp
+	$(CXX) -o $(APP) main.cpp ${DEPS}
 
 clean:
 
