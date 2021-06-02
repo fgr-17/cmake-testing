@@ -13,16 +13,16 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 add_subdirectory(googletest)
 # add_subdirectory(src)
 set(This Example)
+set(INC_DIR "/inc")
 
-set(Headers
-    src/Example.hpp
-)
+# target_include_directories(${This} INTERFACE ${INC_DIR})
+# include_directories(${INC_DIR})
 
 set(Sources
     src/Example.cpp
 )
 
-add_library(${This} STATIC ${Sources} ${Headers})
-
+add_library(${This} STATIC ${Sources})
+target_include_directories(${This} INTERFACE ${INC_DIR})
 
 add_subdirectory(test)
