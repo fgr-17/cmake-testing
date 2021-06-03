@@ -1,5 +1,5 @@
 #include <iostream>
-#include "example/Example.hpp"
+#include <Example.hpp>
 
 using namespace std;
 
