@@ -16,3 +16,4 @@ lib/
 lib*.a
 ExampleTests
 !src/Makefile
+output/
