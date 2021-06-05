@@ -13,14 +13,16 @@ add_subdirectory(googletest)
 set(This Example)
 set(INC_DIR 
     src/example
-    external-lib
+    external-lib/complex
+    external-lib/points
 )
 
 include_directories(${INC_DIR})
 
 set(Sources
     src/example/Example.cpp
-    external-lib/complex.cpp
+    external-lib/complex/complex.cpp
+    external-lib/points/points.c
 )
 
 add_library(${This} STATIC ${Sources})

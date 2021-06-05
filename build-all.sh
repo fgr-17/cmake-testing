@@ -1,17 +1,33 @@
 #!/bin/bash
 cwd=$(pwd)
+OUTPUT_DIR=output
+SOURCE_DIR=src
+
+if [ $# == 1 ]; then
+    if [ $1 == "clean" ]; then
+        echo "Deleting output files ..."
+        rm -rf ${OUTPUT_DIR}
+        cd ${SOURCE_DIR}
+        make clean
+        exit 0
+    fi
+fi
 
 echo -e '\nBuilding target ...'
 cd ${cwd}
-cd src
+cd ${SOURCE_DIR}
 make
 
 echo -e '\nBuilding testing suite ...'
 cd ${cwd}
-mkdir -p output
-cd output
+mkdir -p ${OUTPUT_DIR}
+cd ${OUTPUT_DIR}
 cmake ../
+make
 
 echo -e '\nRunning tests'
 cd ${cwd}
-./test/ExampleTests
+./${OUTPUT_DIR}/test/ExampleTests
+
+
+exit 0
