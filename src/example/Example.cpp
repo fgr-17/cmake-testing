@@ -1,8 +1,12 @@
 #include <Example.hpp>
-#include <complex.hpp>
+#include <class-a.hpp>
 
-extern "C" {
-    #include <points.h>
+int is_greater_10 (int a) {
+
+    if(a > 10)
+        return 1;
+    else    
+        return 0;
 }
 
 complex sum_array_complex(complex*buf, int n) {
@@ -22,8 +26,6 @@ point_t sum_points(point_t*buf, int n){
     }
     return ret;
 }
-
-
 
 int Sum(int a, int b) {
 
