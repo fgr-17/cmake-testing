@@ -15,6 +15,7 @@ set(INC_DIR
     src/example
     external-lib/complex
     external-lib/points
+    external-lib/class-a
 )
 
 include_directories(${INC_DIR})

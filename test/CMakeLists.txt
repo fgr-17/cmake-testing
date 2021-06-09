@@ -13,7 +13,7 @@ target_link_libraries(${This} PUBLIC
     Example
 )
 
-add_test(
-    NAME ${This}
-    COMMAND ${This}
-)
+# add_test(
+#     NAME ${This}
+#     COMMAND ${This}
+# )
