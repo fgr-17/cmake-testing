@@ -5,9 +5,11 @@ class mock_A: public A {
 
 public:
 
-    MOCK_METHOD(void, print, void );
-    MOCK_METHOD(int, get, void);
-    MOCK_METHOD(void, set, int);
+    // virtual void print() const { std::cout << var1 << std::endl;}
+
+    MOCK_METHOD(void, print, () );
+    MOCK_METHOD(int, get, ());
+    MOCK_METHOD(void, set, (int));
 };
 
 #endif // __MOCK_CLASS_A_HPP

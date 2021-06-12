@@ -6,6 +6,7 @@
 
 #include "mock-class-a.h"
 
+// using ::testing::AtLeast;                        // #1
 
 TEST(ExampleTest, DemoGtest) {
 
@@ -18,3 +19,4 @@ TEST(ExampleTest, is_greater_10_test) {
     EXPECT_FALSE(is_greater_10(4));
     EXPECT_FALSE(is_greater_10(3));
 }
+

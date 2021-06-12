@@ -1,6 +1,18 @@
 #include <Example.hpp>
 #include <class-a.hpp>
 
+
+int function_using_class (void) {
+    A v1(2);
+
+    v1.print();
+    v1.set(3);
+    v1.print();    
+
+    return 0;
+}
+
+
 int is_greater_10 (int a) {
 
     if(a > 10)
@@ -11,7 +23,7 @@ int is_greater_10 (int a) {
 
 complex sum_array_complex(complex*buf, int n) {
     int i;
-    complex ret{};
+    complex ret;
     for (i = 0; i < n; i++) {
         ret = add_complex(ret, buf[i]);
     }
