@@ -16,6 +16,7 @@ set(INC_DIR
     external-lib/complex
     external-lib/points
     external-lib/class-a
+    test/doubles/
 )
 
 include_directories(${INC_DIR})

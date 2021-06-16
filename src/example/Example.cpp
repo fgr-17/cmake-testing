@@ -1,5 +1,20 @@
 #include <Example.hpp>
 #include <class-a.hpp>
+#include <far-lib.hpp>
+
+
+using namespace std;
+
+int function_using_far_lib(void) {
+
+    far_lib a;
+
+    a.set(5);
+    
+    cout << a.get() << endl;
+
+    return 0;
+}
 
 
 int function_using_class (void) {
