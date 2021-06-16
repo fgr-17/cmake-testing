@@ -8,12 +8,15 @@ set(Sources
 
 add_executable(${This}  ${Sources})
 
+# enable_testing()
+
 target_link_libraries(${This} PUBLIC
-    gtest_main
+    # gtest_main
+    gmock_main
     Example
 )
 
-add_test(
-    NAME ${This}
-    COMMAND ${This}
-)
+# add_test(
+#     NAME ${This}
+#     COMMAND ${This}
+# )
